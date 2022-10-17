@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+    background: linear-gradient(#9f86c0, #e0b1cb);
+    height: 130vh;
+}
+
+.container {
+    margin: auto;
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 4px;
+}
+
+.search-container {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 6px;
+
+    input {
+        color: #4e5279;
+        font-size: 15px;
+        padding: 5px;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #9f86c0;
+
+        &:focus{
+            border-bottom: 2px solid #5e548e;
+        }
+    }
+
+    .search-btn {
+        font-size: 15px;
+        padding: 5px;
+        font-weight: 400;
+        border-radius: 25px;
+        background-color: #9f86c0;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.result {
+    color: #4e5279;
+    line-height: 25px;
+    
+    .cocktail-img {
+        display: block;
+        max-width: 100%;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-top: 30px;
+
+    }
+    h2 {
+        margin-top: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 15%;
+            height: 2px;
+            background-color: #9f86c0;
+            bottom: -6px;
+            left: 42.5%;
+        }
+    }
+    h3 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    ul {
+        margin-left: 30px;
+        display: grid;
+        grid-template-columns: auto auto;
+        
+        li{
+            margin-bottom: 10px;
+        }
+    }
+    p {
+        text-align: justify;
+    }
+}
+
+.msg {
+    text-align: center;
+    color: #4e5279;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        font-size: 14px;
+        width: 90%;
+    }
+    
+}
