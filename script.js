@@ -47,5 +47,10 @@ let getInfo = () => {
     }
 };
 
+const handleSubmit = (event) => {
+    event.preventDefault();
+    getInfo();
+}
+
 // window.addEventListener("load", getInfo);
 searchBtn.addEventListener('click', getInfo);
